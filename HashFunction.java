@@ -4,8 +4,11 @@ import java.util.List;
 public class HashFunction {
     int[] OUT = new int[5];
     int[][] block = new int[5][5];
+    String ciphertext;
 
-    public HashFunction(String plaintext) {
+    public HashFunction() { }
+
+    void hashMessage(String plaintext){
         int[][] round1 = new int[5][5];
         int[][] round2 = new int[5][5];
         int[][] round3 = new int[5][5];
@@ -86,8 +89,8 @@ public class HashFunction {
                 OUT[i] = (OUT[i] + sum) % 27;
             }
         }
-        
-        intArrayToAlphabet(OUT);
+
+        ciphertext = intArrayToAlphabet(OUT);
     }
 
     private static int[] alphabetToIntArray(String string) {
@@ -129,7 +132,7 @@ public class HashFunction {
     }
 
     public String getOutput(){
-        return intArrayToAlphabet(OUT);
+        return ciphertext;
     }
 }
 
