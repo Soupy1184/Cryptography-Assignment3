@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class HashFunction {
@@ -91,6 +92,7 @@ public class HashFunction {
         }
 
         ciphertext = intArrayToAlphabet(OUT);
+        Arrays.fill(OUT, 0);
     }
 
     private static int[] alphabetToIntArray(String string) {

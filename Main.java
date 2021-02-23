@@ -19,7 +19,9 @@ public class Main {
         System.out.println(mac.getOutput());
 
         //Problem 3
-        
+        HashAttack attack = new HashAttack();
+        attack.attackHashFunction(hash1);
+
     }
 
     private static String generateRandomKey() {
