@@ -92,6 +92,7 @@ public class HashFunction {
         }
 
         ciphertext = intArrayToAlphabet(OUT);
+        //reset out to null
         Arrays.fill(OUT, 0);
     }
 
