@@ -22,28 +22,32 @@ public class Main {
         HashAttack attack = new HashAttack();
         attack.attackHashFunction(hash1);
 
-        HashFunction test1 = new HashFunction();
-        HashFunction test2 = new HashFunction();
-        test1.hashMessage("dssoxxxggoiuqlab  jqwqobt");
-        System.out.println(test1.getOutput());
-        test2.hashMessage("ehpqwrygsheayjnrhcjsmjskl");
-        System.out.println(test2.getOutput());
+        //Uncomment this section to see two strings found with the same hash value
+
+        // HashFunction test1 = new HashFunction();
+        // HashFunction test2 = new HashFunction();
+        // test1.hashMessage("dssoxxxggoiuqlab  jqwqobt");
+        // System.out.println(test1.getOutput());
+        // test2.hashMessage("ehpqwrygsheayjnrhcjsmjskl");
+        // System.out.println(test2.getOutput());
 
     }
 
+    //generates random key of 5 letters for HMAC key in problem 2
     private static String generateRandomKey() {
         String string = "";
         int[] tempArray = new int[5];
 
         for (int i = 0; i < 5; i++) {
             tempArray[i] = getRandomNumberInRange(0, 26);
-            string = intArrayToAlphabet(tempArray);
+            string = intArrayToString(tempArray);
         }
 
         return string;
     }
 
-    private static String intArrayToAlphabet(int[] array){
+    //changes and int array to a string
+    private static String intArrayToString(int[] array){
         String string = "";
         String alphabet = "abcdefghijklmnopqrstuvwxyz ";
 

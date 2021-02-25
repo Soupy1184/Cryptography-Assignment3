@@ -48,23 +48,12 @@ public class HashAttack extends HashFunction {
             string = "";
             for (int j = 0; j < 25; j++){
                 tempArray[j] = getRandomNumberInRange(0, 26);
-                string = intArrayToAlphabet(tempArray);
+                string = super.intArrayToAlphabet(tempArray);
             }
             list.add(string);
         }
 
         return list;
-    }
-
-    private static String intArrayToAlphabet(int[] array){
-        String string = "";
-        String alphabet = "abcdefghijklmnopqrstuvwxyz ";
-
-        for (int i = 0; i < array.length; i++){
-            string += alphabet.charAt(array[i]);
-        }
-
-        return string;
     }
 
     //gets a random number in a range

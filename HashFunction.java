@@ -123,7 +123,7 @@ public class HashFunction {
         return parts;
     }
 
-    private static String intArrayToAlphabet(int[] array){
+    protected static String intArrayToAlphabet(int[] array){
         String string = "";
         String alphabet = "abcdefghijklmnopqrstuvwxyz ";
 
